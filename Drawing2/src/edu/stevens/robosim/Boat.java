@@ -1,8 +1,7 @@
 package edu.stevens.robosim;
 
 public abstract class Boat extends Robot{
-	private double depth;
-	
+	private double depth;	
 	
 }
 
