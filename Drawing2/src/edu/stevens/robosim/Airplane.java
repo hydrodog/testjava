@@ -1,6 +1,7 @@
 package edu.stevens.robosim;
 
-public class Airplane{
+
+public class Airplane extends Robot{
 	
 	private static float x,y,z,vx,vy,vz,time;
 	
