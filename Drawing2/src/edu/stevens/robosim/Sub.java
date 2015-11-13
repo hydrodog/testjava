@@ -2,17 +2,12 @@ package edu.stevens.robosim;
 
 public class Sub extends Robot{
 	double buoyancy;
-	double weight;
 	
-	public Robot()
+	public Sub(Vector pos, Vector vel, int theta, int pitch, 
+			int mass, int battery, int battery_max, int voltage, int vel_max, double buoyancy)
 	{
-		
-	}
-	public void ChangeWeight(double w){
-		weight += w;
+		super();
 	}
 	
-	public double RisingSpeed( weight ){//Z speed
-		
-	}
+	public void move(Vector v)
 }
