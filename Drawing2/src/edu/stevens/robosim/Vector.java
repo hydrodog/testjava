@@ -35,8 +35,11 @@ private double x, y, z;
 	}
 	
 	void change (double a, double b, double c){
-		x =a;
+		x = a;
 		y = b;
 		x = c;
+	}
+	double getMag(){
+		return Math.sqrt(x*x + y*y +z*z);
 	}
 }
