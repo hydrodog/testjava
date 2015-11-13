@@ -1,8 +1,11 @@
 package edu.stevens.robosim;
 
 public abstract class Robot {
-	private Vector position;
-	private Vector velocity;
+	private Vector realPosition;
+	private Vector realVelocity;
+	private Vector imagePosition;
+	private Vector imageVelocity;
+	
 	private enum Angle{up, down}
 	private double mass;
 	private double batter_life;
@@ -12,11 +15,14 @@ public abstract class Robot {
 	private double theta;
 	public abstract void pitch(Angle angle, double degree);
 	public double mass(){return mass;}
-	public Robot(Vector position, Vector velocity, double mass,
+	public Robot(Vector realposition, Vector realvelocity, Vector imageposition, Vector imagevelocity, double mass,
 			double batter_life, double max_cur, double max_vol, double theta) {
 		super();
-		this.position = position;
-		this.velocity = velocity;
+		this.realPosition = realposition;
+		this.realVelocity = realvelocity;
+		this.imagePosition = imageposition;
+		this.imageVelocity = imagevelocity;
+		
 		this.mass = mass;
 		this.batter_life = batter_life;
 		this.max_cur = max_cur;
@@ -28,17 +34,29 @@ public abstract class Robot {
 	public abstract void stop();
 	
 	//=============getter and setter=======
-	public Vector getPosition() {
-		return position;
+	public Vector getRealPosition() {
+		return realPosition;
 	}
-	public void setPosition(Vector position) {
-		this.position = position;
+	public void setRealPosition(Vector position) {
+		this.realPosition = position;
 	}
-	public Vector getVelocity() {
-		return velocity;
+	public Vector getRealVelocity() {
+		return realVelocity;
 	}
-	public void setVelocity(Vector velocity) {
-		this.velocity = velocity;
+	public void setImageVelocity(Vector velocity) {
+		this.realVelocity = velocity;
+	}
+	public Vector getImagePosition() {
+		return imagePosition;
+	}
+	public void setImagePosition(Vector position) {
+		this.imagePosition = position;
+	}
+	public Vector getImageVelocity() {
+		return imageVelocity;
+	}
+	public void setRealVelocity(Vector velocity) {
+		this.imageVelocity = velocity;
 	}
 	public double getMass() {
 		return mass;
