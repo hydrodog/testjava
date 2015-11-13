@@ -20,7 +20,12 @@ public class Sub extends Robot{
 	
 	private void damaged()
 	{
-		
+		double dam=0;
+		double waterdepth;
+		if(getRealPosition()>waterdepth)
+			dam++;
+		if(dam>10)
+			stop();
 	}
 	public void stop()
 	{
