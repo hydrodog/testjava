@@ -2,7 +2,6 @@ package edu.stevens.robosim;
 import java.util.ArrayList;
 import java.util.Random;
 
-<<<<<<< HEAD
 public class Environment {
 	private double x;
 	private double y;
@@ -28,23 +27,4 @@ public class Environment {
     	for (int i = 0; i < n ; i++)
     		map.add(new Grid(10.0, 10.0));
     }
-	
-
-
-	
-	
-	
-=======
-public abstract class Environment 
-{
-	private maximum current;
-	private voltage;
-	private maximum velocity;
-	public Environment(int i; int v; int velocity)
-	{
-		maximun current = i;
-		voltage = v;
-		velocity = 
-	}
->>>>>>> 08263fd2d1121878e23b5eba7980a8a03e70f1d6
 }
