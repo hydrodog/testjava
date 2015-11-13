@@ -4,8 +4,7 @@ public class Vector {
 	
 private double x, y, z;
 	
-	public Vector( double x, double y, double z){
-		
+	public Vector( double x, double y, double z){	
 		this.x=x;
 		this.y=y;
 		this.z=z;		
@@ -15,7 +14,6 @@ private double x, y, z;
 		return x;
 	}
 	
-	
 	double getY(){
 		return y;
 	}
@@ -24,31 +22,24 @@ private double x, y, z;
 		return z;
 	}
 	
-	void addition (double a, double b, double c){
-		
-		x = x+a;
-		y=y+b;
-		z=z+c;
+	void add(double a, double b, double c){
+		x = x + a;
+		y = y + b;
+		z = z + c;
 	}
 	
-	void addition(Vector v){
-		x = x+v.x;
-		y=y+v.y;
-		z=z+v.y;
-		
+	void add(Vector v){
+		x = x + v.x;
+		y = y + v.y;
+		z = z + v.y;
 	}
 	
 	void change (double a, double b, double c){
-		
-		x =a;
+		x = a;
 		y = b;
 		x = c;
 	}
-	
-	void stop (){
-		x=0;
-		y=0;
-		z=0;
+	double getMag(){
+		return Math.sqrt(x*x + y*y +z*z);
 	}
-
 }
