@@ -10,4 +10,7 @@ public class Sub extends Robot{
 	}
 	
 	public void move(Vector v)
+	{
+		
+	}
 }
