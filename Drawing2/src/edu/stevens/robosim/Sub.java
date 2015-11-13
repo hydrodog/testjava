@@ -10,6 +10,7 @@ public class Sub extends Robot{
 		super(realposition, realvelocity, imageposition, imagevelocity, mass,battery_life, max_cur, max_vel, theta);
 		//pitch, voltage, buoyancy
 		pitch(angle,degree);
+		this.buoyancy = buoyancy;
 	}
 	
 	public void move(Vector vel, Vector water_vel)
