@@ -16,7 +16,7 @@ public abstract class Robot {
 	public abstract void pitch(Angle angle, double degree);
 	public double mass(){return mass;}
 	public Robot(Vector realposition, Vector realvelocity, Vector imageposition, Vector imagevelocity, double mass,
-			double batter_life, double max_cur, double max_vel, double theta) {
+			double batter_life, double max_cur, double max_vel, double theta, double voltage) {
 		super();
 		this.realPosition = realposition;
 		this.realVelocity = realvelocity;
