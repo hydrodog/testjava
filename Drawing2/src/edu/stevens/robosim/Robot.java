@@ -11,12 +11,12 @@ public abstract class Robot {
 	private double batter_life;
 	private double voltage;
 	private double max_cur;
-	private double max_vol;
+	private double max_vel;
 	private double theta;
 	public abstract void pitch(Angle angle, double degree);
 	public double mass(){return mass;}
 	public Robot(Vector realposition, Vector realvelocity, Vector imageposition, Vector imagevelocity, double mass,
-			double batter_life, double max_cur, double max_vol, double theta) {
+			double batter_life, double max_cur, double max_vel, double theta, double voltage) {
 		super();
 		this.realPosition = realposition;
 		this.realVelocity = realvelocity;
@@ -26,9 +26,9 @@ public abstract class Robot {
 		this.mass = mass;
 		this.batter_life = batter_life;
 		this.max_cur = max_cur;
-		this.max_vol = max_vol;
+		this.max_vel = max_vel;
 		this.theta = theta;
-		this.voltage = max_vol;
+		this.voltage = voltage;
 	}
 	
 	public abstract void stop();
@@ -83,10 +83,10 @@ public abstract class Robot {
 		this.max_cur = max_cur;
 	}
 	public double getMax_vol() {
-		return max_vol;
+		return max_vel;
 	}
-	public void setMax_vol(double max_vol) {
-		this.max_vol = max_vol;
+	public void setMax_vol(double max_vel) {
+		this.max_vel = max_vel;
 	}
 	public double getTheta() {
 		return theta;
@@ -94,7 +94,6 @@ public abstract class Robot {
 	public void setTheta(double theta) {
 		this.theta = theta;
 	}
-	
 	
 	
 }
