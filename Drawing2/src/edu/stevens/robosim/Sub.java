@@ -14,5 +14,18 @@ public class Sub extends Robot{
 	{
 		
 	}
+	
+	private void damaged()
+	{
+		
+	}
+	public void stop()
+	{
+		
+	}
+	public void pitch(Angle angle, double degree)
+	{
+		
+	}
 }
 
