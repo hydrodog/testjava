@@ -22,7 +22,7 @@ public class Sub extends Robot{
 	{
 		double dam=0;
 		double waterdepth;
-		if(getRealPosition()>waterdepth)
+		if(getRealPosition().getZ() > waterdepth)
 			dam++;
 		if(dam>10)
 			stop();
