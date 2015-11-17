@@ -1,9 +1,15 @@
 package edu.stevens.robosim;
+/**
+   @author: Jinghao Xing
+   @author: Xiaoyu Fan
+   @author: Xi Li
+*/
 
 public class Sub extends Robot{
 	double buoyancy;
 	Angle angle;
 	double degree;
+	// Constructor.
 	public Sub(Vector realposition, Vector realvelocity, Vector imageposition, Vector imagevelocity, double mass,
 			double battery_life, double max_cur, double max_vel, double theta, double buoyancy, Angle angle, double degree )
 	{
@@ -12,7 +18,7 @@ public class Sub extends Robot{
 		pitch(angle,degree);
 		this.buoyancy = buoyancy;
 	}
-	
+	// Move method. vel denote original velocity, water_vel denote the water velocity.
 	public void move(Vector vel, Vector water_vel)
 	{
 		
