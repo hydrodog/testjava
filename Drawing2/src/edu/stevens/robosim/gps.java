@@ -6,10 +6,10 @@ public abstract class gps {
 
 
 
-	private PositionRadians lat, lon, true position, gaussian error, estimate position, sigma, y, a;
+	private PositionRadians lat, lon, true position, gaussian error, estimate position, sigma,x, y, a;
 	y = math.sqrt(2*3.14);
 	a= 1/y*sigma;
-	gaussian error=
+	gaussian error=a*Math.exp(-x*x/(2*sigma*sigma));
 	
 	public Position() {
 		this(0,0);
@@ -24,6 +24,10 @@ public abstract class gps {
 		lat = pos.getLatitude();
 		lon = pos.getLongitude();
 	}
+	true possition= lat+lon;
+	
+	estimate position= true position+gaussian error;
 	
 	
-	
+}
+}
