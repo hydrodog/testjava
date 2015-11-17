@@ -9,6 +9,7 @@ public class Sub extends Robot{
 	double buoyancy;
 	Angle angle;
 	double degree;
+	//Sonar sonar.
 	// Constructor.
 	public Sub(Vector realposition, Vector realvelocity, Vector imageposition, Vector imagevelocity, double mass,
 			double battery_life, double max_cur, double max_vel, double theta, double voltage, 
