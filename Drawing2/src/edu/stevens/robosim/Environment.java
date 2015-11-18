@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Environment {
-	private double x;
-	private double y;
-	private double z;
+	private double sizeX;
+	private double sizeY;
+	private double sizeZ;
 	private int n;
 	private static Random r = new Random();
     public static int dieRoll() { return r.nextInt(6) + 1; }
