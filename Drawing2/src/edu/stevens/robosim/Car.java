@@ -14,6 +14,13 @@ public class Car extends Robot{
 		setRealPosition(v.add(getRealVelocity().add(CarSpeed)));
 	}
 	
-	public void stop();
+	public void stop(){
+		setRealVelocity(new Vector(0,0,0));
+	};
+
+	public void pitch(Angle angle, double degree) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
