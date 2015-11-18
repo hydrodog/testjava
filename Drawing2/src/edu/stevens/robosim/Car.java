@@ -2,7 +2,7 @@
 
 package edu.stevens.robosim;
 
-public abstract class Car extends Robot{
+public class Car extends Robot{
 	public Car(Vector realposition, Vector realvelocity, Vector imageposition, Vector imagevelocity, double mass,
 			double batter_life, double max_cur, double max_vel, double theta, double voltage,
 			int NumWheel){
@@ -14,6 +14,6 @@ public abstract class Car extends Robot{
 		setRealPosition(v.add(getRealVelocity().add(CarSpeed)));
 	}
 	
-	public abstract void stop();
+	public void stop();
 	
 }
