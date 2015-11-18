@@ -9,8 +9,9 @@ public abstract class Car extends Robot{
 		super(realposition,realvelocity,imageposition,imagevelocity,mass,batter_life,max_cur,max_vel,theta,voltage);
 	}
 	
-	public Vector move(Vector realpositon, Vector imagevelocity){
-		return realpositon.add(imagevelocity);
+	public void move(Vector CarSpeed){
+		Vector v = getRealPosition();
+		setRealPosition(v.add(getRealVelocity().add(CarSpeed)));
 	}
 	
 	public abstract void stop();
