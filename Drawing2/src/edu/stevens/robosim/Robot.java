@@ -6,7 +6,7 @@ public abstract class Robot {
 	private Vector imagePosition;
 	private Vector imageVelocity;
 	
-	private enum Angle{up, down}
+	protected enum Angle{up, down}
 	private double mass;
 	private double batter_life;
 	private double voltage;
