@@ -44,7 +44,7 @@ public abstract class Robot {
 		return realVelocity;
 	}
 	public void setImageVelocity(Vector velocity) {
-		this.realVelocity = velocity;
+		this.imageVelocity= velocity;
 	}
 	public Vector getImagePosition() {
 		return imagePosition;
@@ -56,7 +56,7 @@ public abstract class Robot {
 		return imageVelocity;
 	}
 	public void setRealVelocity(Vector velocity) {
-		this.imageVelocity = velocity;
+		this.realVelocity = velocity;
 	}
 	public double getMass() {
 		return mass;
