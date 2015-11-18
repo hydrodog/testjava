@@ -1,5 +1,11 @@
 package edu.stevens.robosim;
-
+/**
+ * 
+ * @author Jun ShangGuan
+ * @author Xin Pan
+ * @author Jintao Li
+ *
+ */
 
 public class Airplane extends Robot{
 	Angle angle;
@@ -18,22 +24,31 @@ public class Airplane extends Robot{
 		return false;
 	}
 	
-	public void move(Vector speed){
-		Vector now=getRealPosition();
-		 now.add(speed);
-		setRealPosition(now);
+	public boolean stall(){
+		if(getRealVelocity().getX()<1 || getRealVelocity().getY()<1 || getRealVelocity().getZ()<1){
+			System.out.println("The velocity is too slow and the airplan would stall!");
+			return true;
+		}
+		return false;
 	}
 	
-	@Override
+	public void move(Vector speed){
+		if(stall() || crash()){
+			System.out.println("Modify the velocity immediately!");
+		}else{
+			Vector now=getRealPosition();
+			now.add(speed);
+			setRealPosition(now);
+		}
+	}
+	
 	public void pitch(Angle angle, double degree) {
-		// TODO Auto-generated method stub
 		this.angle=angle;
 		this.degree=degree;
 	}
 
-	@Override
+	
 	public void stop() {
-		// TODO Auto-generated method stub
 		setRealVelocity(new Vector(0,0,0));
 	}
 }
