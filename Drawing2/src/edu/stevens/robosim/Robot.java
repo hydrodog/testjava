@@ -1,3 +1,9 @@
+/*
+ * author Jiefeng Wu, Yiwei Lu, Xiaoyan Zhen
+ * Roboy class 
+ */
+
+
 package edu.stevens.robosim;
 
 public abstract class Robot {
@@ -30,7 +36,7 @@ public abstract class Robot {
 		this.theta = theta;
 		this.voltage = voltage;
 	}
-	
+	// stop function for each robot
 	public abstract void stop();
 	
 	//=============getter and setter=======
