@@ -22,16 +22,18 @@ private double x, y, z;
 		return z;
 	}
 	
-	void add(double a, double b, double c){
-		x = x + a;
-		y = y + b;
-		z = z + c;
+	Vector add(double a, double b, double c){
+		this.x += a;
+		this.y += b;
+		this.z += c;
+		return this;
 	}
 	
-	void add(Vector v){
-		x = x + v.x;
-		y = y + v.y;
-		z = z + v.y;
+	Vector add(Vector v){
+		this.x += v.x;
+		this.y += v.y;
+		this.z += v.y;
+		return this;
 	}
 	
 	void change (double a, double b, double c){
