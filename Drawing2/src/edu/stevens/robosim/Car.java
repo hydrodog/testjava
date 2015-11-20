@@ -12,7 +12,7 @@ public class Car extends Robot{
 			double batter_life, double max_cur, double max_vel, double theta, double voltage){
 		super(realposition,realvelocity,imageposition,imagevelocity,mass,batter_life,max_cur,max_vel,theta,voltage);
 	}
-	//It there is water return true.
+	//If there is water, return true.
 	public boolean Water(){
 		if(getRealPosition().getZ()<0){
 			return true;
