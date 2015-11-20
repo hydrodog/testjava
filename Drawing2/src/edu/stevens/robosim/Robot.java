@@ -1,10 +1,13 @@
+
+package edu.stevens.robosim;
+
 /*
- * author Jiefeng Wu, Yiwei Lu, Xiaoyan Zhen
+ * @author Jiefeng Wu, 
+ * @author Yiwei Lu, 
+ * @author Xiaoyan Zhen
  * Roboy class 
  */
 
-
-package edu.stevens.robosim;
 
 public abstract class Robot {
 	private Vector realPosition;
