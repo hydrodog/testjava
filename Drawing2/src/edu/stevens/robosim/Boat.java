@@ -13,14 +13,14 @@ public abstract class Boat extends Environment{
 	}
 }
 	double Bdisplacement, Btime, Bspeed;
-	public void BoatAccleration(double displacement, double time){
+	public void BoatAccleration(double Bdisplacement, double Btime){
 		
-		Bspeed = displacement * 100 / Btime;
+		Bspeed = Bdisplacement * 100 / Btime;
 		
-		if (Bdisplacement>Btime){
+		if (Bdisplacement>Btime){ // boat will accelerate if displacement is greater than time
 			System.out.println("Boat is in Accelerate mode");
 		}
-		else if(Bdisplacement<Btime) {
+		else if(Bdisplacement<Btime) { // boat will decelerate if displacement is less than time
 			System.out.println("Boat is in Decelerate mode");
 		}
 		else if (Bdisplacement == Btime){
