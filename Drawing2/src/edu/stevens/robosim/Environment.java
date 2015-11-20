@@ -1,4 +1,11 @@
 package edu.stevens.robosim;
+/**
+ * 
+ * @author Bo Liu
+ * @author Zhicheng Yan
+ * @author Juncheng Li
+ *
+ */
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -17,11 +24,11 @@ public class Environment {
 	public double getX(){ return 0;}
 	public double getY(){ return 0;}
 	public double getZ(){ return 0;}
-	public double getLandheight(){ return 0;}
-	public double getWaterdepth(){ return 0;}
-	public double getWaterspeed(){ return 0;}
-	public double getAirspeed(){ return 0;}
-	public double getAirdirection(){ return 0;}
+	public double getLandheight(double lh){ return lh;}
+	public double getWaterdepth(double wd){ return wd;}
+	public double getWaterspeed(double ws){ return ws;}
+	public double getAirspeed(double as){ return as;}
+	public double getAirdirection(double ar){ return ar;}
     public Environment(){
     	ArrayList<Grid> map = new ArrayList<Grid>();
     	for (int i = 0; i < n ; i++)
