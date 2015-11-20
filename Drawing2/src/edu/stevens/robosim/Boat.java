@@ -1,8 +1,14 @@
 package edu.stevens.robosim;
-
+/**
+ * 
+ * @author Shrikant Limaye
+ * @author Nishil Parikh
+ * @author Sushmita De
+ *
+ */
 public abstract class Boat extends Environment{
 	class Depth extends Environment{
-	public Depth(double waterdepth, double waterspeed, double landheight){
+	public Depth(double waterdepth, double waterspeed, double landheight, double boatHeight, double boatDepthSubmerged){
 	super();
 	}
 }
@@ -19,9 +25,29 @@ public abstract class Boat extends Environment{
 		}
 	}
 	
-	
-	
-	
+	private double getBoatHeight() {
+		return 0;
+}
+
+	public double getBoatDepthSubmerged(){
+		return 0;
+	}
+	public boolean positiveBuoyancy() {
+	//Condition: The boat can float only if it is submerged up to a depth of 30-70%
+		if(getLandheight()<getWaterdepth()&& (getBoatDepthSubmerged() <= 0.7*getBoatHeight() || getBoatDepthSubmerged() >= 0.3*getBoatHeight())){
+			System.out.println("The boat is floating");
+			return true;
+		}
+		return false;
+	}
+
+	public void stop() {
+	//Condition: If land height is greater than or equal to the water depth, the boat will stop
+		if(getLandheight()>= getWaterdepth()){
+			System.out.println("The boat is not in motion");
+		}
+	}
+
 }
 
 
