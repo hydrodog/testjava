@@ -1,4 +1,8 @@
 package edu.stevens.robosim;
+/* author Srushti
+ * 		  Harish
+ * It will indicate position of all robots
+ */
 
 import java.awt.Graphics;
 
