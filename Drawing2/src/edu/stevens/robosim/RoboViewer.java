@@ -1,6 +1,6 @@
 package edu.stevens.robosim;
-/* author Srushti
- * 		  Harish
+/* author: Srushti
+ * 		   Harish
  * It will indicate position of all robots
  */
 
@@ -14,7 +14,7 @@ public class RoboViewer  {
 			Vector v;
 			double x=v.getX();
 			double y=v.getY();
-			g.drawOval(x,y,10,10);
+			g.drawOval(x,y,10,10);// will draw the position
 		}
 }
 
