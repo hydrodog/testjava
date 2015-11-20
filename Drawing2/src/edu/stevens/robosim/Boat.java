@@ -19,13 +19,13 @@ public abstract class Boat extends Environment{
 		
 		if (Bdisplacement>Btime){ // boat will accelerate if displacement is greater than time
 			System.out.println("Boat is in Accelerate mode");
+			Bspeed += Bdisplacement;
 		}
 		else if(Bdisplacement<Btime) { // boat will decelerate if displacement is less than time
 			System.out.println("Boat is in Decelerate mode");
+			Bspeed -= Bdisplacement;
 		}
-		else if (Bdisplacement == Btime){
-			System.out.println("Boat is steady");
-		}
+		
 	}
 	
 	private double getBoatHeight() {
