@@ -6,7 +6,7 @@ package edu.stevens.robosim;
  * @author Sushmita De
  *
  */
-public abstract class Boat extends Environment{
+public class Boat extends Environment{
 	class Depth extends Environment{
 	public Depth(double waterspeed, double boatHeight, double boatDepthSubmerged){
 	super();
