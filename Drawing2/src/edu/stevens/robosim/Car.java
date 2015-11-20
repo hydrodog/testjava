@@ -31,7 +31,7 @@ public class Car extends Robot{
 		}
 		
 	}
-	//To stop the car, we can set the real_velocity to (0,0,0).
+	//To stop the car, we can set the real_velocity to 0.
 	public void stop(){
 		setRealVelocity(new Vector(0,0,0));
 	};
