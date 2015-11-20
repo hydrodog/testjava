@@ -1,6 +1,6 @@
 package edu.stevens.robosim;
-/* author: Srushti
- * 		   Harish
+/* @author: Srushti
+ * @author: Harish
  * It will indicate position of all robots
  */
 
