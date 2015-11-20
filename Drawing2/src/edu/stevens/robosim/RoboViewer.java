@@ -11,10 +11,10 @@ import javax.swing.JPanel;
 public class RoboViewer  {
 	
 		public void draw(Graphics g) {
-			Vector v;
+			Vector v= null;
 			double x=v.getX();
 			double y=v.getY();
-			g.drawOval(x,y,10,10);// will draw the position
+			g.drawOval((int)x,(int)y,10,10);// will draw the position
 		}
 }
 
