@@ -6,7 +6,13 @@ package edu.stevens.robosim;
  * @author Sushmita De
  *
  */
-public abstract class Boat extends Environment{
+public class Boat extends Robot{
+	public Boat(Vector realposition, Vector realvelocity, Vector imageposition, Vector imagevelocity, double mass,
+			double batter_life, double max_cur, double max_vel, double theta, double voltage) {
+		super(realposition, realvelocity, imageposition, imagevelocity, mass, batter_life, max_cur, max_vel, theta, voltage);
+	
+	}
+
 	class Depth extends Environment{
 	public Depth(double waterspeed, double boatHeight, double boatDepthSubmerged){
 	super();
@@ -54,7 +60,7 @@ public abstract class Boat extends Environment{
 
 	public void stop() {
 	//Condition: If land height is greater than or equal to the water depth, the boat will stop
-		if(getLandheight(Bdisplacement)>= getWaterdepth(Bdisplacement)){
+		if(getLandheight()>= getWaterdepth()){
 			System.out.println("The boat is not in motion");
 		}
 	}
@@ -81,6 +87,12 @@ public abstract class Boat extends Environment{
 		public void setV(double v) {
 			this.v = v;
 		}
+	}
+
+	@Override
+	public void pitch(Angle angle, double degree) {
+		// TODO Auto-generated method stub
+		
 	}
 }
 
