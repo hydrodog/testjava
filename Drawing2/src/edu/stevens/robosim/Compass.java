@@ -1,5 +1,14 @@
 package edu.stevens.robosim;
 
+/**
+ * 
+ * @author Pratibha
+ * @author Chris
+ * Shows the direction a vehicle is heading
+ * 
+ */
+import 
+
 import java.lang.Math;
 
 
