@@ -5,7 +5,7 @@ package edu.stevens.robosim;
  * 
  * 
  * Shows the direction a vehicle is heading.
- * 
+ *
  */
 
 
