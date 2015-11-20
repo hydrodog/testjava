@@ -46,7 +46,7 @@ public abstract class Boat extends Environment{
 
 	public void stop() {
 	//Condition: If land height is greater than or equal to the water depth, the boat will stop
-		if(getLandheight()>= getWaterdepth()){
+		if(getLandheight(Bdisplacement)>= getWaterdepth(Bdisplacement)){
 			System.out.println("The boat is not in motion");
 		}
 	}
@@ -57,7 +57,21 @@ public abstract class Boat extends Environment{
 		}
 	}
 	
+	// trying to give direction to boat
+	public class direction extends Compass
+	{
+
+		private double v;
+
+		direction(Vector v) {
+			super(v);
+	
+		
+	
 }
+		
+	}
+	}
 
 
 
