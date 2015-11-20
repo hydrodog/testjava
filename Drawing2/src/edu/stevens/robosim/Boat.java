@@ -23,6 +23,9 @@ public abstract class Boat extends Environment{
 		else if(Bdisplacement<Btime) {
 			System.out.println("Boat is in Deaccelerate mode");
 		}
+		else if (Bdisplacement == Btime){
+			System.out.println("Boat is steady");
+		}
 	}
 	
 	private double getBoatHeight() {
