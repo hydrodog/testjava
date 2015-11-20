@@ -2,7 +2,7 @@ package edu.stevens.robosim;
 import java.util.Vector;
 
 
-public abstract class gps {
+public class gps {
 
 
 
