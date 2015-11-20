@@ -21,7 +21,7 @@ public abstract class Boat extends Environment{
 			System.out.println("Boat is in Accelerate mode");
 		}
 		else if(Bdisplacement<Btime) {
-			System.out.println("Boat is in Deaccelerate mode");
+			System.out.println("Boat is in Decelerate mode");
 		}
 		else if (Bdisplacement == Btime){
 			System.out.println("Boat is steady");
