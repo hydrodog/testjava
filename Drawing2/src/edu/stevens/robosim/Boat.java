@@ -8,10 +8,12 @@ package edu.stevens.robosim;
  */
 public abstract class Boat extends Environment{
 	class Depth extends Environment{
-	public Depth(double waterdepth, double waterspeed, double landheight, double boatHeight, double boatDepthSubmerged){
+	public Depth(double waterspeed, double boatHeight, double boatDepthSubmerged){
 	super();
 	}
 }
+	private static final double lh = 0;
+	private static final double wd = 0;
 	double Bdisplacement, Btime, Bspeed;
 	public void BoatAccleration(double Bdisplacement, double Btime){
 		
@@ -30,11 +32,17 @@ public abstract class Boat extends Environment{
 	
 	private double getBoatHeight() {
 		return 0;
-}
-
+	}
 	public double getBoatDepthSubmerged(){
 		return 0;
 	}
+	public double getWaterdepth() {
+		return wd;
+	}
+	public double getLandheight() {
+		return lh;
+	}
+
 	public boolean positiveBuoyancy() {
 	//Condition: The boat can float only if it is submerged up to a depth of 30-70%
 		if(getLandheight()<getWaterdepth()&& (getBoatDepthSubmerged() <= 0.7*getBoatHeight() || getBoatDepthSubmerged() >= 0.3*getBoatHeight())){
@@ -46,7 +54,7 @@ public abstract class Boat extends Environment{
 
 	public void stop() {
 	//Condition: If land height is greater than or equal to the water depth, the boat will stop
-		if(getLandheight()>= getWaterdepth()){
+		if(getLandheight(Bdisplacement)>= getWaterdepth(Bdisplacement)){
 			System.out.println("The boat is not in motion");
 		}
 	}
@@ -57,6 +65,23 @@ public abstract class Boat extends Environment{
 		}
 	}
 	
+	// trying to give direction to boat
+	public class direction extends Compass
+	{
+		private double v;
+
+		direction(Vector v) {
+			super(v);
+		}
+
+		public double getV() {
+			return v;
+		}
+
+		public void setV(double v) {
+			this.v = v;
+		}
+	}
 }
 
 
