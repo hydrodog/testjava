@@ -1,3 +1,5 @@
+//Authors: Chris Coyle and Pratibha V
+
 package edu.stevens.robosim;
 
 public class Vector {

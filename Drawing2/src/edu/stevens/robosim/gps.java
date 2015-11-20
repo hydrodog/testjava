@@ -9,7 +9,8 @@ public abstract class gps {
 	private PositionRadians lat, lon, true position, gaussian_error, estimate position, sigma,x, y, a;
 	y = math.sqrt(2*3.14);
 	a= 1/y*sigma;
-	gaussian_error=a*Math.exp(-x*x/(2*sigma*sigma));
+	
+	gaussian_error= a*Math.exp(-x*x/(2*sigma*sigma));
 	
 	public Position() {
 		this(0,0);
