@@ -1,4 +1,13 @@
 package edu.stevens.robosim;
+
+/**
+ * 
+ * @author Pratibha
+ * 
+ * GPS measures position
+ * takes the real position of the robot and adds normally distributed error
+ * 
+ */
 import java.util.Vector;
 
 
