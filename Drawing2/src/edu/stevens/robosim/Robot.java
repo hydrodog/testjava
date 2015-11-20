@@ -1,3 +1,9 @@
+/*
+ * author Jiefeng Wu, Yiwei Lu, Xiaoyan Zhen
+ * Roboy class 
+ */
+
+
 package edu.stevens.robosim;
 
 public abstract class Robot {
@@ -6,7 +12,7 @@ public abstract class Robot {
 	private Vector imagePosition;
 	private Vector imageVelocity;
 	
-	private enum Angle{up, down}
+	protected enum Angle{up, down}
 	private double mass;
 	private double batter_life;
 	private double voltage;
@@ -30,7 +36,7 @@ public abstract class Robot {
 		this.theta = theta;
 		this.voltage = voltage;
 	}
-	
+	// stop function for each robot
 	public abstract void stop();
 	
 	//=============getter and setter=======
@@ -44,7 +50,7 @@ public abstract class Robot {
 		return realVelocity;
 	}
 	public void setImageVelocity(Vector velocity) {
-		this.realVelocity = velocity;
+		this.imageVelocity= velocity;
 	}
 	public Vector getImagePosition() {
 		return imagePosition;
@@ -56,7 +62,7 @@ public abstract class Robot {
 		return imageVelocity;
 	}
 	public void setRealVelocity(Vector velocity) {
-		this.imageVelocity = velocity;
+		this.realVelocity = velocity;
 	}
 	public double getMass() {
 		return mass;
