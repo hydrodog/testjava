@@ -19,15 +19,15 @@ public class Car extends Robot{
 		}
 		return false;
 	}
-	// If a want to turn, just set the Carspeed to a unit Vector. And the speed of the car would be the length of Vector Carspeed.
+	// If a want to turn, just set the CarVelocity to a unit Vector. And the speed of the car would be the length of Vector Carspeed.
 	// And if there is water it will stop();
-	public void move(Vector CarSpeed){
+	public void move(Vector CarVelocity){
 		if (Water()==true){
 			stop();
 		}else{
 			Vector v = getRealPosition();
-			setImageVelocity(CarSpeed);
-			setRealPosition(v.add(CarSpeed));
+			setImageVelocity(CarVelocity);
+			setRealPosition(v.add(CarVelocity));
 		}
 		
 	}
