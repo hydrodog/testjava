@@ -38,7 +38,7 @@ public abstract class Boat extends Environment{
 	public boolean positiveBuoyancy() {
 	//Condition: The boat can float only if it is submerged up to a depth of 30-70%
 		if(getLandheight()<getWaterdepth()&& (getBoatDepthSubmerged() <= 0.7*getBoatHeight() || getBoatDepthSubmerged() >= 0.3*getBoatHeight())){
-			System.out.println("The boat is floating");
+			System.out.println("The boat is in motion");
 			return true;
 		}
 		return false;
@@ -50,7 +50,13 @@ public abstract class Boat extends Environment{
 			System.out.println("The boat is not in motion");
 		}
 	}
-
+	public void sink(){
+	//Condition: The boat will sink if it is submerged more than 70% of its height
+		if(getBoatDepthSubmerged() >= 0.7*getBoatHeight()){
+			System.out.println("Help! The boat is sinking!");
+		}
+	}
+	
 }
 
 
