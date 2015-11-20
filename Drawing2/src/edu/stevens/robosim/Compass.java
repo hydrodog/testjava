@@ -5,7 +5,7 @@ import java.lang.Math;
 
 public class Compass {
 		
-	private int direction;
+	public int direction;
 
 	 Compass(Vector v){
 		 

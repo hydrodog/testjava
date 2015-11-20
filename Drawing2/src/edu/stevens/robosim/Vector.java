@@ -1,3 +1,5 @@
+//Authors: Chris Coyle and Pratibha V
+
 package edu.stevens.robosim;
 
 public class Vector {
@@ -22,16 +24,20 @@ private double x, y, z;
 		return z;
 	}
 	
-	void add(double a, double b, double c){
-		x = x + a;
-		y = y + b;
-		z = z + c;
+	Vector add(double a, double b, double c){
+		Vector temp = new Vector(0,0,0);
+		temp.x = this.x + a;
+		temp.y = this.y + b;
+		temp.z = this.z + c;
+		return temp;
 	}
 	
-	void add(Vector v){
-		x = x + v.x;
-		y = y + v.y;
-		z = z + v.y;
+	Vector add(Vector v){
+		Vector temp = new Vector(0,0,0);
+		temp.x = this.x + v.x;
+		temp.y = this.y + v.y;
+		temp.z = this.z + v.y;
+		return temp;
 	}
 	
 	void change (double a, double b, double c){
