@@ -9,10 +9,11 @@ import javax.swing.JPanel;
 
 public class RoboViewer  {
 	
-		private int startX,startY,endX,endY;
-		private ArrayList arraylst;
 		public void draw(Graphics g) {
+			Vector v;
+			double x=v.getX();
+			double y=v.getY();
 			g.drawOval(x,y,10,10);
 		}
-}|
+}
 
