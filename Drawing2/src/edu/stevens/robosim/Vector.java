@@ -25,17 +25,19 @@ private double x, y, z;
 	}
 	
 	Vector add(double a, double b, double c){
-		this.x += a;
-		this.y += b;
-		this.z += c;
-		return this;
+		Vector temp = new Vector(0,0,0);
+		temp.x = this.x + a;
+		temp.y = this.y + b;
+		temp.z = this.z + c;
+		return temp;
 	}
 	
 	Vector add(Vector v){
-		this.x += v.x;
-		this.y += v.y;
-		this.z += v.y;
-		return this;
+		Vector temp = new Vector(0,0,0);
+		temp.x = this.x + v.x;
+		temp.y = this.y + v.y;
+		temp.z = this.z + v.y;
+		return temp;
 	}
 	
 	void change (double a, double b, double c){
