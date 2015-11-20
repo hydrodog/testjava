@@ -1,11 +1,10 @@
-
 package edu.stevens.robosim;
 
 /*
  * @author Jiefeng Wu, 
  * @author Yiwei Lu, 
  * @author Xiaoyan Zhen
- * Roboy class 
+ *  Robot class 
  */
 
 
