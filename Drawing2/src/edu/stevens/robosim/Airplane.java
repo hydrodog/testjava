@@ -1,7 +1,7 @@
 package edu.stevens.robosim;
 /**
  * 
- * @author Jun ShangGuan
+ * @author Jun ShangG
  * @author Xin Pan
  * @author Jintao Li
  *
